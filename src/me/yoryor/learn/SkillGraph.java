@@ -1,9 +1,6 @@
 package me.yoryor.learn;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -13,6 +10,9 @@ public class SkillGraph implements Iterable<Skill>, Computable {
     private Set<Skill> skills = new HashSet<>();
 
     public void add(Skill skill) {
+        if (Objects.isNull(skill)) {
+            throw new IllegalArgumentException("Skill can not be null.");
+        }
         skills.add(skill);
     }
 
