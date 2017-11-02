@@ -27,6 +27,6 @@ public class SkillGraph implements Iterable<Skill>, Computable {
 
     @Override
     public double getResult() {
-        return skills.stream().mapToInt(Skill::getLevel).average().orElse(0);
+        return skills.stream().mapToInt(skill -> skill.getLevel() * skill.getWeight().getNumber()).average().orElse(0);
     }
 }

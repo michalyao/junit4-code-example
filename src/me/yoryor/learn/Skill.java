@@ -6,6 +6,7 @@ package me.yoryor.learn;
 public class Skill {
     private String name;
     private int level;
+    private Weight weight;
 
     public Skill(String name, int level) {
         this.name = name;
@@ -26,5 +27,13 @@ public class Skill {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    public Weight getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Weight weight) {
+        this.weight = weight;
     }
 }
